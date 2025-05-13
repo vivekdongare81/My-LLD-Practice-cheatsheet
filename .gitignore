@@ -1,0 +1,54 @@
+# Java build files
+*.class
+*.jar
+*.war
+*.ear
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+*.local
+
+# Eclipse project files
+.classpath
+.project
+.settings/
+
+# Build output
+/bin/
+/target/
+/build/
+
+# Maven
+/logs/
+*.log
+*.tmp
+*.bak
+*.swp
+
+# Gradle
+.gradle/
+/build/
+
+# Package files
+*.jar
+*.war
+*.ear
+
+# IDEs
+.idea/
+*.iml
+
+# VS Code
+.vscode/
+
+# Environment config
+.env
+*.local
+

@@ -1,0 +1,88 @@
+#===== Designing a Parking Lot System
+
+ 1. The parking lot should have multiple levels, each level with a certain number of parking spots.
+ 2. The parking lot should support different types of vehicles, such as cars, motorcycles, and trucks.
+ 3. Each parking spot should be able to accommodate a specific type of vehicle.
+ 4. The system should assign a parking spot to a vehicle upon entry and release it when the vehicle exits.
+ 5. The system should track the availability of parking spots and provide real-time information to customers.
+ 6. The system should handle multiple entry and exit points and support concurrent access.
+
+#---- Core Requirements
+
+Multiple Floors
+Parking Spots
+Vehicle Type
+Parking Availability?
+Spot Allocation
+Ticketing
+Unparking
+Fee Calculation
+Extensibility - Add new Vehicle, Spot Types, Fee Strategies
+
+#---- Core Entities
+
+ParkingLot
+ParkingLevel
+ParkingSpot
+<<Vehicle>> Bike Car
+VehicleType
+Ticket
+<<FeeCalculationStrat>> IndividualStrat FixedStrat
+
+#---- Class Design
+
+@ParkingLot
+List<levels>
+Map<String ticketID, activetickets>
+feeStratContext
+addParkingLevel(level_id)
+setFeeStrategy
+getParkingLevel - to check availability
+park(vehicle) : ticket
+unPark(ticket): fees
+
+@ParkingLevel
+level_id
+List<spots>
+getAvailableSpotNumbers
+getFirstAvailableSpots(VehicleType)
+
+
+@ParkingSpot
+spot_id
+vehicle_type
+vehicle [0.1]
+isAvailable()
+park(vehicle): boolean
+unPark()
+
+@Vehicle
+licence_id
+vechicle_type
+
+@VehicleType
+enum or abstract class Car, Bike, Truck
+
+
+@Ticket
+id
+SpotInfo
+VehicleInfo
+entryTime
+exitTime
+fees //can be cal outside
+
+@FeeCalculation
+strategy 
+
+
+#---- KEY LEARNS
+
+class entities > code            - first create class entities and then code
+rought methods with TODO         - add all method names in all class refering entities 
+same method in TOP & Used class  - add method on Top class and follow same method in used class
+make IDs as final                - every entity class should have id with private final 
+Key funs then getters setters        - add key funs first then getters & setters
+
+
+
