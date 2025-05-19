@@ -17,6 +17,8 @@ Spot Allocation
 Ticketing
 Unparking
 Fee Calculation
+data consistency
+
 Extensibility - Add new Vehicle, Spot Types, Fee Strategies
 
 #---- Core Entities

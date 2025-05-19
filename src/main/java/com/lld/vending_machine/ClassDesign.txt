@@ -1,0 +1,39 @@
+#===== Designing a Parking Lot System
+
+The vending machine should support multiple products with different prices and quantities.
+The machine should accept coins and notes of different denominations.
+The machine should dispense the selected product and return change if necessary.
+The machine should keep track of the available products and their quantities.
+The machine should handle multiple transactions concurrently and ensure data consistency.
+The machine should provide an interface for restocking products and collecting money.
+The machine should handle exceptional scenarios, such as insufficient funds or out-of-stock products.
+
+#---- Core Requirements
+
+- Product Management - create products with price and quantities
+- Inventory Management - manage product quantities, restocks
+- Payment Handling - manage curr balance and exchange of money 
+- State Management - manage current state of Machine in process 
+- User Interaction - can choose which action to do - select/insertCoins/receiveProducts
+- Data consistency 
+- Extensibility: Easy to add new product types, payment methods, or states.
+
+#---- Core Entities
+
+Vending Machine
+I-Product (Books, pen)
+Coins
+Notes
+Inventory
+I-VendingMachineState ( IdleState, ReadyState, and DispenseState)
+
+
+
+#---- Class Design
+
+
+#---- KEY LEARNS
+
+- can have classes which are not included in Requirements as Nouns
+
+

@@ -1,0 +1,92 @@
+#===== Designing a Parking Lot System
+
+1. Users can post questions, answer questions, and comment on questions and answers.
+2. Users can vote on questions and answers.
+3. Questions should have tags associated with them.
+4. Users can search for questions based on keywords, tags, or user profiles.
+5. The system should assign reputation score to users based on their activity and the quality of their contributions.
+6. The system should handle concurrent access and ensure data consistency.
+
+#---- Core Requirements
+
+User Management - can add user
+Question & answers - User can post ques, answers,  Each que can have 1 accepted answer
+Voting - User can Upvote or Downvote both Ques and Answers.
+Commenting - can commnet on both ques and answers
+assignReputation - increase reputations on vote types and Accepted Answers
+search for Ques - 
+data consistency
+Extensibility - Add new Tags, assign Score Stratgey
+
+#---- Core Entities
+StackOverflow
+User
+Questions
+Answers
+Comments
+Votes
+Enum Tags
+SearchStratgey
+
+#---- Class Design
+
+@StackOverflow
+users
+List<questions>
+addUser()
+askQuestion()
+answerQuestions()
+voteQuestion()
+commentOnQuestion()
+commentOnAnswer()
+voteQuestion()
+voteAnswer()
+markAcceptedAnswer();
+
+@User
+id
+reputation
+askQuestion()
+addAnswer()
+addComment()
+updateReputation
+
+@Questions
+id
+tags
+List<answers>
+acceptedAnswer
+votes
+comments 
+
+@Answers
+id
+votes
+comments
+
+
+@Comments
+id
+text
+user 
+
+@Votes
+id
+user
+
+ ags
+id
+text
+
+
+
+#---- KEY LEARNS
+
+class entities > code            - first create class entities and then code
+rought methods with TODO         - add all method names in all class refering entities 
+same method in TOP & Used class  - add method on Top class and follow same method in used class
+make IDs as final                - every entity class should have id with private final 
+Key funs then getters setters        - add key funs first then getters & setters
+
+
+
