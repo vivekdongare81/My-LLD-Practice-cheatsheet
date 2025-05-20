@@ -9,35 +9,34 @@ public class DispenseState implements VendingMachineState {
 
   private VendingMachine machine;
 
-  DispenseState(VendingMachine machine) {
+  public DispenseState(VendingMachine machine) {
     this.machine = machine;
   }
 
   public void selectProject(Product product) {
-	  machine.selectProduct(product);
+	  System.out.println("please collect product");
   }
 
   @Override
   public void insertCoin(Coin coin) {
-    // TODO Auto-generated method stub
-
+	  System.out.println("please collect product");
   }
 
   @Override
   public void insertNote(Note note) {
-    // TODO Auto-generated method stub
-
+	  System.out.println("please collect product");
   }
 
   @Override
   public void dispenseProduct() {
-    // TODO Auto-generated method stub
-
+	   Product product = machine.getSelectedProduct();
+	   machine.getInventory().updateQuantity(product, machine.getInventory().getQuantity(product) - 1);
+       System.out.println("Product dispensed: " + product.getName());
+       machine.setState(machine.getReturnChangeState()); // Change the state to ReturnChangeState
   }
 
   @Override
   public void returnChange() {
-    // TODO Auto-generated method stub
-
+	  System.out.println("please collect product");
   }
 }

@@ -9,7 +9,7 @@ public class IdleState implements VendingMachineState {
 
   private VendingMachine machine;
 
-  IdleState(VendingMachine machine) {
+  public IdleState(VendingMachine machine) {
     this.machine = machine;
   }
 
@@ -17,7 +17,7 @@ public class IdleState implements VendingMachineState {
   public void selectProject(Product product) {
       if (machine.getInventory().isAvailable(product)) {
           System.out.println("Product selected: " + product.getName());
-          machine.selectProduct(product);
+          machine.setSelectedProduct(product);
           machine.setState(machine.getReadyState());
       } else {
           System.out.println("Product not available: " + product.getName());
@@ -26,25 +26,21 @@ public class IdleState implements VendingMachineState {
 
   @Override
   public void insertCoin(Coin coin) {
-    // TODO Auto-generated method stub
-
+	  System.out.println("please select product");
   }
 
   @Override
   public void insertNote(Note note) {
-    // TODO Auto-generated method stub
-
+	  System.out.println("please select product");
   }
 
   @Override
   public void dispenseProduct() {
-    // TODO Auto-generated method stub
-
+	  System.out.println("please select product");
   }
 
   @Override
   public void returnChange() {
-    // TODO Auto-generated method stub
-
+	  System.out.println("please select product");
   }
 }

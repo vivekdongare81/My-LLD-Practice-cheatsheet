@@ -35,5 +35,6 @@ I-VendingMachineState ( IdleState, ReadyState, and DispenseState)
 #---- KEY LEARNS
 
 - can have classes which are not included in Requirements as Nouns
-
+- First create child/small class with function,
+- call for req funcs in child/small class and Then create it in parent
 

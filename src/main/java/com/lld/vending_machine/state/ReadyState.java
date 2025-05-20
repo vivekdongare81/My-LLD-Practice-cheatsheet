@@ -9,35 +9,45 @@ public class ReadyState implements VendingMachineState {
 
   private VendingMachine machine;
 
-  ReadyState(VendingMachine machine) {
+  public ReadyState(VendingMachine machine) {
     this.machine = machine;
   }
 
   public void selectProject(Product product) {
-	  machine.selectProduct(product);
+	  System.out.println("please insert coin/note product");
   }
 
   @Override
   public void insertCoin(Coin coin) {
-    // TODO Auto-generated method stub
+	  machine.addCoin(coin);
+      System.out.println("Coin inserted: " + coin);
+      checkPaymentStatus();
 
   }
 
   @Override
   public void insertNote(Note note) {
-    // TODO Auto-generated method stub
-
+	  machine.insertNote(note);
+      System.out.println("Note inserted: " + note);
+      checkPaymentStatus();
   }
 
   @Override
   public void dispenseProduct() {
-    // TODO Auto-generated method stub
-
+	  System.out.println("please select product");
   }
 
   @Override
   public void returnChange() {
-    // TODO Auto-generated method stub
+	  System.out.println("please select product");
+  }
+  
 
+  private void checkPaymentStatus() {
+      if (machine.getTotalPayment() >= machine.getSelectedProduct().getPrice()) {
+    	  machine.setState(machine.getDispenseState());
+      }else {
+    	  System.out.println("less money" ); 
+      }
   }
 }
