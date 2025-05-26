@@ -1,4 +1,4 @@
-package com.lld.traffic_signal_system;
+package com.lld.coffee_vending_machine;
 
 public class PaymentProcessor {
   public double processPayment(double price, double paid) {

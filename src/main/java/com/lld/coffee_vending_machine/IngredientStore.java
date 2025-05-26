@@ -1,4 +1,4 @@
-package com.lld.traffic_signal_system;
+package com.lld.coffee_vending_machine;
 
 import java.util.HashMap;
 import java.util.Map;
