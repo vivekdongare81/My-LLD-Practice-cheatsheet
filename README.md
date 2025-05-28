@@ -7,6 +7,7 @@ Content:
 4. Design Logging System
 5. Traffic Signal System 
 6. Coffee Vending Machine
+7. Task Management System
 
 
 
