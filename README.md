@@ -8,6 +8,7 @@ Content:
 5. Traffic Signal System 
 6. Coffee Vending Machine
 7. Task Management System
+8. ATM management system
 
 
 
