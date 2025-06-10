@@ -11,7 +11,11 @@ public class App {
 
 		linkedin.sendMessage(user1, user2, "hi");
 		user2.getInbox().forEach(item -> System.out.println(item.getContent()));
-		linkedin.postJobPost("soft dev", "zoho", "jav dev", "chennai");
+		JobPost job = linkedin.postJobPost("soft dev", "zoho", "jav dev", "chennai");
 		linkedin.getJobs().forEach((key, val) -> System.out.println(val.getCompanyName()));
+		
+		job.addObserver(user1);
+		job.addObserver(user2);
+		job.notifyObeservers("New Job Listed Guys !");
 	}
 }

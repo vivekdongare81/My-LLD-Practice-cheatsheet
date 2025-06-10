@@ -4,7 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-public class User {
+import com.lld.linkedin.observer.NotificationObserver;
+
+public class User implements NotificationObserver{
   private final String userId;
   private final String userName;
   private final String email;
@@ -15,7 +17,7 @@ public class User {
   private final List<Message> sentMessages;
   private final List<Notification> notifications;
 
-  public User(String userName, String email, String password) {
+  public User(String userName, String email, String password){
     super();
     this.userId = UUID.randomUUID().toString();
     this.userName = userName;
@@ -69,5 +71,11 @@ public class User {
 
   public List<Notification> getNotifications() {
     return notifications;
+  }
+
+  @Override
+	public void update(String message) {
+	System.out.println("Got notification of job post");
+	notifications.add(new Notification(this, NotificationType.JOB, message));
   }
 }
