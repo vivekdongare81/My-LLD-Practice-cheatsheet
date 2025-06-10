@@ -8,4 +8,6 @@ public interface EvictionPolicy<K, V> {
 	void onPut(Node<K, V> node);
 
 	Node<K, V> evict();
+	
+	void clear();
 }

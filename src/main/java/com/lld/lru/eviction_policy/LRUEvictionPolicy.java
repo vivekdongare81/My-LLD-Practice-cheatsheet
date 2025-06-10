@@ -39,13 +39,30 @@ public class LRUEvictionPolicy<K, V> implements EvictionPolicy<K, V> {
 
 	@Override
 	public void onPut(Node<K, V> node) {
-
+	    // When a new node is put into the cache, it's initially the most recently used.
+	    // So, add it to the front of the DLL.
+		addToHead(node);
 	}
 
 	@Override
 	public Node<K, V> evict() {
-		return head;
-
+		
+        // The least recently used node is always the one just before the dummy tail node.
+        Node<K, V> lruNode = tail.prev;
+        // If the LRU node is the head, it means the list is empty (only dummy nodes present).
+        if (lruNode == head) {
+            return null; // No node to evict
+        }
+        // Remove the LRU node from the DLL and return it.
+        removeNode(lruNode);
+        return lruNode;
 	}
+	
+    @Override
+    public void clear() {
+        // Reset the DLL by linking head and tail dummy nodes.
+        head.next = tail;
+        tail.prev = head;
+    }
 
 }
