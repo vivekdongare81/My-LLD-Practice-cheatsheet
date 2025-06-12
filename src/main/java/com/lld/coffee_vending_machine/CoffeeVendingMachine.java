@@ -12,7 +12,6 @@ public class CoffeeVendingMachine {
 
   private CoffeeVendingMachine() {
     this.recipes = new HashMap<>();
-    ;
     this.inventory = new IngredientStore();
     this.paymentProcessor = new PaymentProcessor();
     this.dispenser = new Dispenser();
