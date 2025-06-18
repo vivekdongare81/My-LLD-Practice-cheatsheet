@@ -1,0 +1,23 @@
+@ Elevator 
+int id
+currFloor
+capacity
+direction
+requests
+isMoving
+--
+
+
+@ ElevatorController 
+requestElevator(source , destination)
+findOptimalElevator(source , destination)
+step()
+
+@ Request
+floor
+direction
+
+@ E<Direction>
+UP
+DOWN
+IDLE
