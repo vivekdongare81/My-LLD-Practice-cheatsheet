@@ -1,0 +1,26 @@
+
+@RentalSystem
+@RentalStore
+@User
+@Reservation
+@ReservationManager
+
+----- abstract ----
+@VehicleFactory
+@A<Vehicle>
+EconomyVehicle
+SuvVehicle
+LuxuryVehicle
+
+--- strategy ----
+@PaymentProcessor
+@I<PaymentStrategy>
+CashPayment
+CreditCardPayment
+
+--- Enum state management ----
+@VehicleStatus
+@VehicleType
+@ReservationStatus
+
+
