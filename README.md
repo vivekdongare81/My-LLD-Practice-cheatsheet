@@ -15,35 +15,34 @@
 11. ❌⭕ Design Tic-Tac-Toe  
 12. 📡 Design Pub-Hub  
 13. 🛗 Design an Elevator System  
-14. 🚗 Design Car Rental System     `#Singleton #Abstract #Strategy`  
+14. 🚗 Design Car Rental System     `#Singleton #Factory #Strategy`  
 15. 🛠️ _(More coming soon...)_
 
 ---
-## Car Rental System
 
-@RentalSystem
-@RentalStore
-@User
-@Reservation
-@ReservationManager
+**Car Rental System**
 
+@RentalSystem  
+@RentalStore  
+@User  
+@Reservation  
+@ReservationManager  
 
-@VehicleFactory
-@A<Vehicle>
-EconomyVehicle
-SuvVehicle
-LuxuryVehicle
+@VehicleFactory  
+@ A-Vehicle  - @EconomyVehicle  @SuvVehicle  @LuxuryVehicle  
 
-@PaymentProcessor
-@I<PaymentStrategy>
-CashPayment
-CreditCardPayment
+@PaymentProcessor  
+@ I-PaymentStrategy - @CashPayment  @CreditCardPayment  
 
-@VehicleStatus
-@VehicleType
-@ReservationStatus
+@VehicleStatus  
+@VehicleType  
+@ReservationStatus  
 
 ---
+
+**Next Design**
+
+@Elevator
 ## Design an Elevator System
 
 @Elevator
