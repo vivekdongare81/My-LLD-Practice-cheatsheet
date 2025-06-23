@@ -17,7 +17,7 @@ public class AuctionListing implements NotificationSubject {
   private final List<Bid> bidsHistory;
   private Bid highestBid;
 
-  private List<NotificationObserver> observers = new ArrayList<>(); // Added observers list
+  private final List<NotificationObserver> observers = new ArrayList<>(); // Added observers list
 
   public AuctionListing(
       User seller,
@@ -37,12 +37,12 @@ public class AuctionListing implements NotificationSubject {
     this.highestBid = new Bid(startBidAmount, null); // dummy bid
   }
 
-  public void startBidding() {
+  public synchronized void startBidding() {
     this.status = AuctionStatus.BIDDING;
     System.out.println("Bidding Started for item - " + item.getName());
   }
 
-  public void placeBid(Bid bid) {
+  public synchronized void placeBid(Bid bid) {
 
     if (status != AuctionStatus.BIDDING) {
       System.out.println("Opps, Bidding is not Active..");
@@ -64,7 +64,7 @@ public class AuctionListing implements NotificationSubject {
     notifyObeservers(""+bid.getAmount());
   }
 
-  public void closeBidding() {
+  public synchronized void closeBidding() {
     this.status = AuctionStatus.CLOSED;
     System.out.println(
         "Bidding Closed for item - " + item + " , Winner -" + highestBid.getBidder().getUserName());
@@ -76,21 +76,21 @@ public class AuctionListing implements NotificationSubject {
 
   	// Observer DP
 	@Override
-	public void notifyObeservers(String message) {
+	public synchronized void notifyObeservers(String message) {
 		for (NotificationObserver observer : observers) {
 			observer.update(message);
 		}
 	}
 
 	@Override
-	public void addObserver(NotificationObserver observer) {
+	public synchronized void addObserver(NotificationObserver observer) {
 		if(!observers.contains(observer)) {
 			observers.add(observer);
 		}
 	}
 
 	@Override
-	public void removeObserver(NotificationObserver observer) {
+	public synchronized void removeObserver(NotificationObserver observer) {
 		observers.add(observer);
 	}
 
