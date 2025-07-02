@@ -1,0 +1,37 @@
+
+@HotelManagementSystem
+instance              <- or Singleton Design pattern
+guests <id,guest>
+rooms <id,room>
+reservation <id, reservation>
+
+@Room
+id
+price
+RoomType
+RoomStatus
+
+@Guest
+id
+name
+email
+number
+
+@Reservation
+id
+guest
+room
+checkIn
+checkOut
+ReservationStatus
+
+@PaymentProcessor  <- or State Design pattern
+paymentStrategy
+
+@ I<PaymentStrategy>
+processPayment
+
+--- Enum State management ---
+@RoomType  <- or Factory Design pattern
+@RoomStatus
+@ReservationStatus

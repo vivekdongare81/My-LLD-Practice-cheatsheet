@@ -1,0 +1,48 @@
+@DigitalWallet
+instance
+
+@User
+id
+name
+email
+pass
+accounts  List<Account>
+
+@Account
+id, 
+user, 
+accountNumber, 
+currency
+balance
+List<> transactions 
+
+@BankAccount
+accountNumber
+routingNumber
+paymentStrategy 
+
+@CreditCard
+cardNumber
+expirationDate
+CVV
+
+@Transaction 
+id 
+sourceAccount 
+destinationAccount 
+amount 
+currency 
+timestamp
+
+@PaymentHandler
+@PaymentStrategy
+
+@CurrencyConverter
+Map<Currency, BigDecimal> exchangeRates
+convert 
+
+@ E<Currency>
+USD
+EUR
+GBP
+JPY
