@@ -38,7 +38,7 @@ A curated list of system design case studies and class entities cheatsheet imple
 31. Design Online Stock Brokerage System          `#Factory #Strategy #Observer`
 32. Design Music Streaming Service like Spotify   `#Observer #Caching #Strategy`
 33. Design Online Food Delivery Service like Swiggy `#Strategy #Factory #Observer`
-    To be continued ...
+###  Future LLD Design Topics
 xx. Design URL Shortener
 xx. Design Rate Limiter (e.g., Token Bucket)
 xx. Design Inventory Management System
