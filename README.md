@@ -5,25 +5,208 @@ A curated list of system design case studies and class entities cheatsheet imple
 ---
 
 ## 📋 Content
+1.  Design Parking Lot System                     `#Singleton #Strategy #Factory`
+2.  Design Stack Overflow                         `#Observer #Decorator #Strategy`
+3.  Design a Vending Machine                      `#State #Strategy #Singleton`
+4.  Design Logging Framework                      `#Singleton #Strategy #ChainOfResponsibility`
+5.  Design Traffic Signal Control System          `#State #Observer #Command`
+6.  Design Coffee Vending Machine                 `#Singleton #Strategy #Builder`
+7.  Design a Task Management System               `#Observer #Composite #Factory`
+8.  Design ATM                                    `#State #Strategy #Factory`
+9.  Design LinkedIn                               `#Observer #Builder #Factory`
+10. Design LRU Cache                              `#Strategy`
+11. Design Tic Tac Toe Game                       `#Singleton #Strategy`
+12. Design Pub Sub System                         `#Observer #ProducerConsumer`
+13. Design an Elevator System                     `#State #Command #Strategy`
+14. Design Car Rental System                      `#Singleton #Factory #Strategy`
+15. Design an Online Auction System               `#Observer #Factory #Strategy`
+16. Design Hotel Management System                `#Singleton #State #Factory`
+17. Design a Digital Wallet Service               `#Strategy #Factory`
+18. Design Airline Management System              `#Strategy #Factory #Observer`
+19. Design a Library Management System            `#Factory #Strategy #Observer`
+20. Design a Social Network like Facebook         `#Observer #Builder #Strategy`
+21. Design Restaurant Management System           `#Factory #Observer #Strategy`
+22. Design a Concert Ticket Booking System        `#Strategy #Factory #Observer`
+23. Design CricInfo                               `#Observer #Strategy #Factory`
+24. Design Splitwise                              `#Strategy #Observer #Factory`
+25. Design Chess Game                             `#State #Strategy`
+26. Design a Snake and Ladder Game                `#Builder #Strategy`
+27. Design Ride‑Sharing Service like Uber         `#Strategy #Observer #GeoHashing`
+28. Design Course Registration System             `#Factory #Strategy #Observer`
+29. Design Movie Ticket Booking System            `#Singleton #Strategy #Observer`
+30. Design Online Shopping System like Amazon     `#Strategy #Factory #Observer`
+31. Design Online Stock Brokerage System          `#Factory #Strategy #Observer`
+32. Design Music Streaming Service like Spotify   `#Observer #Caching #Strategy`
+33. Design Online Food Delivery Service like Swiggy `#Strategy #Factory #Observer`
 
-1. Design ParkingLot System  
-2. Design StackOverflow  
-3. Designing a Vending Machine  
-4. Design Logging System  
-5. Traffic Signal System  
-6. Coffee Vending Machine  
-7. Task Management System  
-8. ATM Management System  
+
+## Design Patterns
+1. Design Parking Lot System  
+`#Singleton - ParkingLotManager`  
+`#Strategy - FeeCalculation`  
+`#Factory - VehicleType SpotFactory`  
+
+2. Design Stack Overflow  
+`#Observer - Notifications`  
+`#Decorator - Badge System`  
+`#Strategy - SearchRanking`  
+
+3. Design a Vending Machine  
+`#State - MachineState (Idle, Dispense)`  
+`#Strategy - PricingPolicy`  
+`#Singleton - MachineController`  
+
+4. Design Logging Framework  
+`#Singleton - Logger Instance`  
+`#Strategy - LogOutput (Console/File/Remote)`  
+`#ChainOfResponsibility - Log Filters`  
+
+5. Design Traffic Signal Control System  
+`#State - Signal States (Red/Green)`  
+`#Observer - Pedestrian/Vehicle Sensors`  
+`#Command - LightChangeScheduler`  
+
+6. Design Coffee Vending Machine  
+`#Builder - Drink Creation (Espresso, Latte)`  
+`#State - BrewingState`  
+`#Singleton - VendingController`  
+
+7. Design a Task Management System  
+`#Composite - Tasks/Subtasks`  
+`#Observer - Status Update Notifications`  
+`#Factory - TaskObject Creation`  
+
+8. Design ATM  
+`#State - ATMMode (InsertCard, Withdraw)`  
+`#Strategy - TransactionType`  
+`#Factory - CardTypeFactory`  
+
 9. Design LinkedIn  
-10. Design LRU  
-11. Design Tic-Tac-Toe  
-12. Design Pub-Sub System  
-13. Design Elevator System  
-14. Design Car Rental System `#Singleton #Factory #Strategy`  
+`#Observer - Feed Updates`  
+`#Builder - Profile Creation`  
+`#Factory - Post/Connection Objects`  
+
+10. Design LRU Cache  
+`#Strategy - EvictionPolicy (LRU/FIFO)`  
+
+11. Design Tic Tac Toe Game  
+`#Singleton - GameController`  
+`#Strategy - WinChecker`  
+
+12. Design Pub Sub System  
+`#Observer - Topic Subscriptions`  
+`#ProducerConsumer - Message Queue Handling`  
+
+13. Design an Elevator System  
+`#State - ElevatorState (Idle, Moving)`  
+`#Command - FloorRequests`  
+`#Strategy - SchedulingAlgorithm (FCFS/SCAN)`  
+
+14. Design Car Rental System  
+`#Singleton - RentalServiceManager`  
+`#Factory - Vehicle/Plan Creation`  
+`#Strategy - PricingEngine`  
+
+15. Design an Online Auction System  
+`#Observer - Bidder Notifications`  
+`#Strategy - BiddingStrategy (Auto/Manual)`  
+`#Factory - AuctionType`  
+
+16. Design Hotel Management System  
+`#Singleton - BookingManager`  
+`#State - RoomStatus (Available/Booked)`  
+`#Factory - Room/Service Factory`  
+
+17. Design a Digital Wallet Service  
+`#Strategy - PaymentMethod (UPI, Card)`  
+`#Factory - WalletFactory`  
+
+18. Design Airline Management System  
+`#Factory - Flight/Ticket Creation`  
+`#Observer - Flight Updates`  
+`#Strategy - Fare Calculation`  
+
+19. Design a Library Management System  
+`#Factory - Book/Member Creation`  
+`#Observer - Due Notifications`  
+`#Strategy - Fine Calculation`  
+
+20. Design a Social Network like Facebook  
+`#Observer - Feed/Notification System`  
+`#Builder - Profile/Group Creation`  
+`#Strategy - PostRanking`  
+
+21. Design Restaurant Management System  
+`#Factory - Menu Item Creation`  
+`#Observer - Order Notifications`  
+`#Strategy - Order Assignment`  
+
+22. Design a Concert Ticket Booking System  
+`#Strategy - Seat Allocation`  
+`#Factory - Ticket/Customer Object`  
+`#Observer - Booking Notifications`  
+
+23. Design CricInfo  
+`#Observer - Live Match Updates`  
+`#Factory - Player/Match/Event Factory`  
+`#Strategy - Score Calculation`  
+
+24. Design Splitwise  
+`#Strategy - ExpenseSplitting`  
+`#Observer - Payment Status Updates`  
+`#Factory - User/Group Factory`  
+
+25. Design Chess Game  
+`#State - GameState (Turn/End)`  
+`#Strategy - MoveValidator`  
+`#Factory - PieceFactory`  
+
+26. Design a Snake and Ladder Game  
+`#Builder - Board Setup`  
+`#Strategy - DiceRoll`  
+`#Factory - Snake/Ladder Factory`  
+
+27. Design Ride‑Sharing Service like Uber  
+`#Strategy - DriverMatching`  
+`#Observer - Trip Updates`  
+`#GeoHashing - Proximity Search`  
+
+28. Design Course Registration System  
+`#Factory - Course/User/Session`  
+`#Observer - Enrollment Alerts`  
+`#Strategy - TimeConflictResolver`  
+
+29. Design Movie Ticket Booking System  
+`#Singleton - BookingManager`  
+`#Strategy - SeatSelection`  
+`#Observer - Notification System`  
+
+30. Design Online Shopping System like Amazon  
+`#Strategy - Payment/DeliveryOptions`  
+`#Factory - Product/Cart Creation`  
+`#Observer - Order Tracking`  
+
+31. Design Online Stock Brokerage System  
+`#Strategy - OrderExecution`  
+`#Observer - Price Updates`  
+`#Factory - PortfolioFactory`  
+
+32. Design Music Streaming Service like Spotify  
+`#Observer - Playlist/Recommendation Updates`  
+`#Strategy - StreamingQuality`  
+`#Caching - Popular Tracks`  
+
+33. Design Online Food Delivery Service like Swiggy  
+`#Strategy - DeliveryAssignment`  
+`#Factory - Order/Restaurant/UserFactory`  
+`#Observer - Real-Time Tracking`  
+
+
+
 
 ---
 
-## ALL LLD CLASS_ENTITIES
+## ALL LLD Class Entities
 
 ```java
 1. Design Parking Lot
