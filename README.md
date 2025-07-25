@@ -38,7 +38,39 @@ A curated list of system design case studies and class entities cheatsheet imple
 31. Design Online Stock Brokerage System          `#Factory #Strategy #Observer`
 32. Design Music Streaming Service like Spotify   `#Observer #Caching #Strategy`
 33. Design Online Food Delivery Service like Swiggy `#Strategy #Factory #Observer`
-
+    To be continued ...
+xx. Design URL Shortener
+xx. Design Rate Limiter (e.g., Token Bucket)
+xx. Design Inventory Management System
+xx. Design Notification System
+xx. Design Text Editor with Formatting 
+xx. Design In-Memory Virtual File System
+xx. Design Chat Application
+xx. Design Recipe Manager
+xx. Design Bank Account Class
+xx. Design Mini File Sharing App (mini‑Dropbox)
+xx. Design Auto‑Complete Feature (search suggestions)
+xx. Design Key‑Value Data Store (cache)
+xx. Design Banking Notification/Alert System
+xx. Design Board/Card Game (Poker/Boggle)
+xx. Design Email Service or Mailing System
+xx. Design CRM Ticket/Issue Assignment System
+xx. Design Wi-Fi Hotspot Management Class
+xx. Design Meeting Room Scheduler (multiple time slots)
+xx. Design Poll/Voting System with tally and options
+xx. Design Quiz/Test with Question-Bank Class
+xx. Design File Upload Manager (chunking, progress)
+xx. Design Workflows like Order → Ship → Invoice
+xx. Design Delegation Chain for Admin Rights
+xx. Design Remote Worker Attendance Tracker
+xx. Design Email Threading / Conversation Model
+xx. Design Kanban Board (Lists & Cards)
+xx. Design Download Manager (pause/resume logic)
+xx. Design Dynamic Pricing (offers, discounts)
+xx. Design News Feed Ranking System (social app)
+xx. Design File Compression/Decompression Class
+xx. Design Multi-currency Wallet Conversion Logic
+xx. Design OTP Generator & Validator
 
 ## Design Patterns
 1. Design Parking Lot System  
