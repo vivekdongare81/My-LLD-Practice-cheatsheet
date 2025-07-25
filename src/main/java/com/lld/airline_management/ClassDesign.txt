@@ -1,0 +1,23 @@
+@Aircraft - tailNumber, model, totalSeats
+
+@Passenger - id, name, email
+
+@Booking - id , Flight, Passenger, Seat, price, Status [ cancel() ] 
+@BookingManager - instance, <>Booking , lock [ createBooking() cancelBooking() ]
+@BookingStatus 
+
+@Flight - flightNumber, source, dest, departTime, arrivTime, status, Aircraft, <>seats
+@FlightSearch - <>flights, [ addFlight(), searchFlightByKeyword() ]
+@FlightStatus
+
+@Seat - seatNumber, type, status
+@SeatType - ECONOMY, PREMIUM_ECONOMY, BUSINESS, FIRST_CLASS
+@SeatStatus
+
+@Payment             <---------- Strategy
+@PaymentProcessor  
+@PaymentStatus 
+ 
+@AirlineManagementSystem - flights, aircraft, passengers, flightSearch, bookingManager, paymentProcessor
+[addPassenger(), addAircraft(), addFlight(), searchFlight(), cancelBooking(), processPayement() ]
+
