@@ -1,6 +1,6 @@
 # 🚀 MySystem-Design
 
-A curated list of system design case studies and class entities cheatsheet implemented with **Java**, focusing on OOP principles and design patterns.
+A curated list of system design case studies and class entities cheatsheet implemented with **Java**, focusing on OOP principles and design patterns
 
 ---
 
